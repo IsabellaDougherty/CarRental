@@ -61,10 +61,10 @@ Partial Class RentalForm
         Me.TotalChargeTextBox = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TopMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SummaryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TopMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CalculateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,145 +79,129 @@ Partial Class RentalForm
         'NameLabel
         '
         Me.NameLabel.AutoSize = True
-        Me.NameLabel.Location = New System.Drawing.Point(12, 70)
-        Me.NameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.NameLabel.Location = New System.Drawing.Point(8, 46)
         Me.NameLabel.Name = "NameLabel"
-        Me.NameLabel.Size = New System.Drawing.Size(124, 20)
+        Me.NameLabel.Size = New System.Drawing.Size(82, 13)
         Me.NameLabel.TabIndex = 0
         Me.NameLabel.Text = "Customer Name"
         '
         'AddressLabel
         '
         Me.AddressLabel.AutoSize = True
-        Me.AddressLabel.Location = New System.Drawing.Point(12, 113)
-        Me.AddressLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.AddressLabel.Location = New System.Drawing.Point(8, 73)
         Me.AddressLabel.Name = "AddressLabel"
-        Me.AddressLabel.Size = New System.Drawing.Size(68, 20)
+        Me.AddressLabel.Size = New System.Drawing.Size(45, 13)
         Me.AddressLabel.TabIndex = 2
         Me.AddressLabel.Text = "Address"
         '
         'CityLabel
         '
         Me.CityLabel.AutoSize = True
-        Me.CityLabel.Location = New System.Drawing.Point(12, 156)
-        Me.CityLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.CityLabel.Location = New System.Drawing.Point(8, 101)
         Me.CityLabel.Name = "CityLabel"
-        Me.CityLabel.Size = New System.Drawing.Size(35, 20)
+        Me.CityLabel.Size = New System.Drawing.Size(24, 13)
         Me.CityLabel.TabIndex = 4
         Me.CityLabel.Text = "City"
         '
         'State4
         '
         Me.State4.AutoSize = True
-        Me.State4.Location = New System.Drawing.Point(12, 199)
-        Me.State4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.State4.Location = New System.Drawing.Point(8, 129)
         Me.State4.Name = "State4"
-        Me.State4.Size = New System.Drawing.Size(48, 20)
+        Me.State4.Size = New System.Drawing.Size(32, 13)
         Me.State4.TabIndex = 6
         Me.State4.Text = "State"
         '
         'ZipCodeLabel
         '
         Me.ZipCodeLabel.AutoSize = True
-        Me.ZipCodeLabel.Location = New System.Drawing.Point(12, 242)
-        Me.ZipCodeLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.ZipCodeLabel.Location = New System.Drawing.Point(8, 157)
         Me.ZipCodeLabel.Name = "ZipCodeLabel"
-        Me.ZipCodeLabel.Size = New System.Drawing.Size(73, 20)
+        Me.ZipCodeLabel.Size = New System.Drawing.Size(50, 13)
         Me.ZipCodeLabel.TabIndex = 8
         Me.ZipCodeLabel.Text = "Zip Code"
         '
         'BeginOdometerLabel
         '
         Me.BeginOdometerLabel.AutoSize = True
-        Me.BeginOdometerLabel.Location = New System.Drawing.Point(12, 285)
-        Me.BeginOdometerLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BeginOdometerLabel.Location = New System.Drawing.Point(8, 185)
         Me.BeginOdometerLabel.Name = "BeginOdometerLabel"
-        Me.BeginOdometerLabel.Size = New System.Drawing.Size(219, 20)
+        Me.BeginOdometerLabel.Size = New System.Drawing.Size(146, 13)
         Me.BeginOdometerLabel.TabIndex = 10
         Me.BeginOdometerLabel.Text = "Beginning Odometer Reading"
         '
         'EndOdometerLabel
         '
         Me.EndOdometerLabel.AutoSize = True
-        Me.EndOdometerLabel.Location = New System.Drawing.Point(12, 328)
-        Me.EndOdometerLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.EndOdometerLabel.Location = New System.Drawing.Point(8, 213)
         Me.EndOdometerLabel.Name = "EndOdometerLabel"
-        Me.EndOdometerLabel.Size = New System.Drawing.Size(198, 20)
+        Me.EndOdometerLabel.Size = New System.Drawing.Size(132, 13)
         Me.EndOdometerLabel.TabIndex = 12
         Me.EndOdometerLabel.Text = "Ending Odometer Reading"
         '
         'DaysLabel
         '
         Me.DaysLabel.AutoSize = True
-        Me.DaysLabel.Location = New System.Drawing.Point(12, 371)
-        Me.DaysLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.DaysLabel.Location = New System.Drawing.Point(8, 241)
         Me.DaysLabel.Name = "DaysLabel"
-        Me.DaysLabel.Size = New System.Drawing.Size(126, 20)
+        Me.DaysLabel.Size = New System.Drawing.Size(85, 13)
         Me.DaysLabel.TabIndex = 14
         Me.DaysLabel.Text = "Number Of Days"
         '
         'NameTextBox
         '
-        Me.NameTextBox.Location = New System.Drawing.Point(240, 64)
-        Me.NameTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.NameTextBox.Location = New System.Drawing.Point(160, 42)
         Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.NameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NameTextBox.TabIndex = 0
         '
         'AddressTextBox
         '
-        Me.AddressTextBox.Location = New System.Drawing.Point(240, 107)
-        Me.AddressTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.AddressTextBox.Location = New System.Drawing.Point(160, 70)
         Me.AddressTextBox.Name = "AddressTextBox"
-        Me.AddressTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.AddressTextBox.Size = New System.Drawing.Size(100, 20)
         Me.AddressTextBox.TabIndex = 1
         '
         'CityTextBox
         '
-        Me.CityTextBox.Location = New System.Drawing.Point(240, 150)
-        Me.CityTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CityTextBox.Location = New System.Drawing.Point(160, 98)
         Me.CityTextBox.Name = "CityTextBox"
-        Me.CityTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.CityTextBox.Size = New System.Drawing.Size(100, 20)
         Me.CityTextBox.TabIndex = 2
         '
         'StateTextBox
         '
-        Me.StateTextBox.Location = New System.Drawing.Point(240, 193)
-        Me.StateTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.StateTextBox.Location = New System.Drawing.Point(160, 125)
         Me.StateTextBox.Name = "StateTextBox"
-        Me.StateTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.StateTextBox.Size = New System.Drawing.Size(100, 20)
         Me.StateTextBox.TabIndex = 3
         '
         'ZipCodeTextBox
         '
-        Me.ZipCodeTextBox.Location = New System.Drawing.Point(240, 236)
-        Me.ZipCodeTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ZipCodeTextBox.Location = New System.Drawing.Point(160, 153)
         Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
-        Me.ZipCodeTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.ZipCodeTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ZipCodeTextBox.TabIndex = 4
         '
         'BeginOdometerTextBox
         '
-        Me.BeginOdometerTextBox.Location = New System.Drawing.Point(240, 279)
-        Me.BeginOdometerTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BeginOdometerTextBox.Location = New System.Drawing.Point(160, 181)
         Me.BeginOdometerTextBox.Name = "BeginOdometerTextBox"
-        Me.BeginOdometerTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.BeginOdometerTextBox.Size = New System.Drawing.Size(100, 20)
         Me.BeginOdometerTextBox.TabIndex = 5
         '
         'EndOdometerTextBox
         '
-        Me.EndOdometerTextBox.Location = New System.Drawing.Point(240, 322)
-        Me.EndOdometerTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.EndOdometerTextBox.Location = New System.Drawing.Point(160, 209)
         Me.EndOdometerTextBox.Name = "EndOdometerTextBox"
-        Me.EndOdometerTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.EndOdometerTextBox.Size = New System.Drawing.Size(100, 20)
         Me.EndOdometerTextBox.TabIndex = 6
         '
         'DaysTextBox
         '
-        Me.DaysTextBox.Location = New System.Drawing.Point(240, 365)
-        Me.DaysTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DaysTextBox.Location = New System.Drawing.Point(160, 237)
         Me.DaysTextBox.Name = "DaysTextBox"
-        Me.DaysTextBox.Size = New System.Drawing.Size(148, 26)
+        Me.DaysTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DaysTextBox.TabIndex = 7
         '
         'OdometerGroupbox
@@ -225,11 +209,9 @@ Partial Class RentalForm
         Me.OdometerGroupbox.Controls.Add(Me.KilometersradioButton)
         Me.OdometerGroupbox.Controls.Add(Me.MilesradioButton)
         Me.OdometerGroupbox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OdometerGroupbox.Location = New System.Drawing.Point(13, 418)
-        Me.OdometerGroupbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.OdometerGroupbox.Location = New System.Drawing.Point(9, 272)
         Me.OdometerGroupbox.Name = "OdometerGroupbox"
-        Me.OdometerGroupbox.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.OdometerGroupbox.Size = New System.Drawing.Size(468, 129)
+        Me.OdometerGroupbox.Size = New System.Drawing.Size(312, 84)
         Me.OdometerGroupbox.TabIndex = 8
         Me.OdometerGroupbox.TabStop = False
         Me.OdometerGroupbox.Text = "Is Odometer In Miles Or Kilometers?"
@@ -237,10 +219,9 @@ Partial Class RentalForm
         'KilometersradioButton
         '
         Me.KilometersradioButton.AutoSize = True
-        Me.KilometersradioButton.Location = New System.Drawing.Point(30, 80)
-        Me.KilometersradioButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.KilometersradioButton.Location = New System.Drawing.Point(20, 52)
         Me.KilometersradioButton.Name = "KilometersradioButton"
-        Me.KilometersradioButton.Size = New System.Drawing.Size(155, 27)
+        Me.KilometersradioButton.Size = New System.Drawing.Size(105, 20)
         Me.KilometersradioButton.TabIndex = 1
         Me.KilometersradioButton.Text = "Kilometers"
         Me.KilometersradioButton.UseVisualStyleBackColor = True
@@ -249,10 +230,9 @@ Partial Class RentalForm
         '
         Me.MilesradioButton.AutoSize = True
         Me.MilesradioButton.Checked = True
-        Me.MilesradioButton.Location = New System.Drawing.Point(30, 37)
-        Me.MilesradioButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MilesradioButton.Location = New System.Drawing.Point(20, 24)
         Me.MilesradioButton.Name = "MilesradioButton"
-        Me.MilesradioButton.Size = New System.Drawing.Size(95, 27)
+        Me.MilesradioButton.Size = New System.Drawing.Size(65, 20)
         Me.MilesradioButton.TabIndex = 0
         Me.MilesradioButton.TabStop = True
         Me.MilesradioButton.Text = "Miles"
@@ -263,11 +243,9 @@ Partial Class RentalForm
         Me.DiscountGroupbox.Controls.Add(Me.Seniorcheckbox)
         Me.DiscountGroupbox.Controls.Add(Me.AAAcheckbox)
         Me.DiscountGroupbox.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DiscountGroupbox.Location = New System.Drawing.Point(529, 418)
-        Me.DiscountGroupbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DiscountGroupbox.Location = New System.Drawing.Point(353, 272)
         Me.DiscountGroupbox.Name = "DiscountGroupbox"
-        Me.DiscountGroupbox.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.DiscountGroupbox.Size = New System.Drawing.Size(360, 129)
+        Me.DiscountGroupbox.Size = New System.Drawing.Size(240, 84)
         Me.DiscountGroupbox.TabIndex = 9
         Me.DiscountGroupbox.TabStop = False
         Me.DiscountGroupbox.Text = "Enter Any Discounts"
@@ -275,10 +253,9 @@ Partial Class RentalForm
         'Seniorcheckbox
         '
         Me.Seniorcheckbox.AutoSize = True
-        Me.Seniorcheckbox.Location = New System.Drawing.Point(30, 86)
-        Me.Seniorcheckbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Seniorcheckbox.Location = New System.Drawing.Point(20, 56)
         Me.Seniorcheckbox.Name = "Seniorcheckbox"
-        Me.Seniorcheckbox.Size = New System.Drawing.Size(312, 27)
+        Me.Seniorcheckbox.Size = New System.Drawing.Size(210, 20)
         Me.Seniorcheckbox.TabIndex = 1
         Me.Seniorcheckbox.Text = "Senior Citizen Discount"
         Me.Seniorcheckbox.UseVisualStyleBackColor = True
@@ -286,40 +263,36 @@ Partial Class RentalForm
         'AAAcheckbox
         '
         Me.AAAcheckbox.AutoSize = True
-        Me.AAAcheckbox.Location = New System.Drawing.Point(30, 43)
-        Me.AAAcheckbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.AAAcheckbox.Location = New System.Drawing.Point(20, 28)
         Me.AAAcheckbox.Name = "AAAcheckbox"
-        Me.AAAcheckbox.Size = New System.Drawing.Size(264, 27)
+        Me.AAAcheckbox.Size = New System.Drawing.Size(178, 20)
         Me.AAAcheckbox.TabIndex = 0
         Me.AAAcheckbox.Text = "AAA Member Discount"
         Me.AAAcheckbox.UseVisualStyleBackColor = True
         '
         'CalculateButton
         '
-        Me.CalculateButton.Location = New System.Drawing.Point(192, 585)
-        Me.CalculateButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CalculateButton.Location = New System.Drawing.Point(128, 380)
         Me.CalculateButton.Name = "CalculateButton"
-        Me.CalculateButton.Size = New System.Drawing.Size(112, 35)
+        Me.CalculateButton.Size = New System.Drawing.Size(75, 23)
         Me.CalculateButton.TabIndex = 10
         Me.CalculateButton.Text = "&Calculate"
         Me.CalculateButton.UseVisualStyleBackColor = True
         '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(330, 585)
-        Me.ClearButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ClearButton.Location = New System.Drawing.Point(220, 380)
         Me.ClearButton.Name = "ClearButton"
-        Me.ClearButton.Size = New System.Drawing.Size(112, 35)
+        Me.ClearButton.Size = New System.Drawing.Size(75, 23)
         Me.ClearButton.TabIndex = 11
         Me.ClearButton.Text = "Cl&ear"
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
-        Me.ExitButton.Location = New System.Drawing.Point(612, 585)
-        Me.ExitButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ExitButton.Location = New System.Drawing.Point(408, 380)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(112, 35)
+        Me.ExitButton.Size = New System.Drawing.Size(75, 23)
         Me.ExitButton.TabIndex = 13
         Me.ExitButton.Text = "&Exit"
         Me.ExitButton.UseVisualStyleBackColor = True
@@ -328,10 +301,9 @@ Partial Class RentalForm
         '
         Me.MilesDrivenLabel.AutoSize = True
         Me.MilesDrivenLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MilesDrivenLabel.Location = New System.Drawing.Point(438, 70)
-        Me.MilesDrivenLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MilesDrivenLabel.Location = New System.Drawing.Point(292, 46)
         Me.MilesDrivenLabel.Name = "MilesDrivenLabel"
-        Me.MilesDrivenLabel.Size = New System.Drawing.Size(298, 23)
+        Me.MilesDrivenLabel.Size = New System.Drawing.Size(199, 16)
         Me.MilesDrivenLabel.TabIndex = 22
         Me.MilesDrivenLabel.Text = "Distance Driven In Miles"
         '
@@ -339,10 +311,9 @@ Partial Class RentalForm
         '
         Me.MileChargeLabel.AutoSize = True
         Me.MileChargeLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MileChargeLabel.Location = New System.Drawing.Point(438, 119)
-        Me.MileChargeLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.MileChargeLabel.Location = New System.Drawing.Point(292, 77)
         Me.MileChargeLabel.Name = "MileChargeLabel"
-        Me.MileChargeLabel.Size = New System.Drawing.Size(178, 23)
+        Me.MileChargeLabel.Size = New System.Drawing.Size(119, 16)
         Me.MileChargeLabel.TabIndex = 24
         Me.MileChargeLabel.Text = "Mileage Charge"
         '
@@ -350,10 +321,9 @@ Partial Class RentalForm
         '
         Me.DayChargeLabel.AutoSize = True
         Me.DayChargeLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DayChargeLabel.Location = New System.Drawing.Point(438, 168)
-        Me.DayChargeLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.DayChargeLabel.Location = New System.Drawing.Point(292, 109)
         Me.DayChargeLabel.Name = "DayChargeLabel"
-        Me.DayChargeLabel.Size = New System.Drawing.Size(130, 23)
+        Me.DayChargeLabel.Size = New System.Drawing.Size(87, 16)
         Me.DayChargeLabel.TabIndex = 26
         Me.DayChargeLabel.Text = "Day Charge"
         '
@@ -361,10 +331,9 @@ Partial Class RentalForm
         '
         Me.DiscountLabel.AutoSize = True
         Me.DiscountLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DiscountLabel.Location = New System.Drawing.Point(438, 217)
-        Me.DiscountLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.DiscountLabel.Location = New System.Drawing.Point(292, 141)
         Me.DiscountLabel.Name = "DiscountLabel"
-        Me.DiscountLabel.Size = New System.Drawing.Size(178, 23)
+        Me.DiscountLabel.Size = New System.Drawing.Size(119, 16)
         Me.DiscountLabel.TabIndex = 28
         Me.DiscountLabel.Text = "Minus Discount"
         '
@@ -372,92 +341,83 @@ Partial Class RentalForm
         '
         Me.YouOweLabel.AutoSize = True
         Me.YouOweLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.YouOweLabel.Location = New System.Drawing.Point(438, 267)
-        Me.YouOweLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.YouOweLabel.Location = New System.Drawing.Point(292, 174)
         Me.YouOweLabel.Name = "YouOweLabel"
-        Me.YouOweLabel.Size = New System.Drawing.Size(94, 23)
+        Me.YouOweLabel.Size = New System.Drawing.Size(63, 16)
         Me.YouOweLabel.TabIndex = 30
         Me.YouOweLabel.Text = "You Owe"
         '
         'HDivLabel
         '
         Me.HDivLabel.BackColor = System.Drawing.SystemColors.ControlText
-        Me.HDivLabel.Location = New System.Drawing.Point(408, 322)
-        Me.HDivLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.HDivLabel.Location = New System.Drawing.Point(272, 209)
         Me.HDivLabel.Name = "HDivLabel"
-        Me.HDivLabel.Size = New System.Drawing.Size(558, 5)
+        Me.HDivLabel.Size = New System.Drawing.Size(372, 3)
         Me.HDivLabel.TabIndex = 32
         '
         'VDivLabel
         '
         Me.VDivLabel.BackColor = System.Drawing.SystemColors.ControlText
-        Me.VDivLabel.Location = New System.Drawing.Point(408, 45)
-        Me.VDivLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.VDivLabel.Location = New System.Drawing.Point(272, 29)
         Me.VDivLabel.Name = "VDivLabel"
-        Me.VDivLabel.Size = New System.Drawing.Size(4, 277)
+        Me.VDivLabel.Size = New System.Drawing.Size(3, 180)
         Me.VDivLabel.TabIndex = 21
         '
         'SummaryButton
         '
-        Me.SummaryButton.Location = New System.Drawing.Point(474, 585)
-        Me.SummaryButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.SummaryButton.Location = New System.Drawing.Point(316, 380)
         Me.SummaryButton.Name = "SummaryButton"
-        Me.SummaryButton.Size = New System.Drawing.Size(112, 35)
+        Me.SummaryButton.Size = New System.Drawing.Size(75, 23)
         Me.SummaryButton.TabIndex = 12
         Me.SummaryButton.Text = "&Summary"
         Me.SummaryButton.UseVisualStyleBackColor = True
         '
         'TotalMilesTextBox
         '
-        Me.TotalMilesTextBox.Location = New System.Drawing.Point(747, 59)
-        Me.TotalMilesTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TotalMilesTextBox.Location = New System.Drawing.Point(498, 38)
         Me.TotalMilesTextBox.Name = "TotalMilesTextBox"
         Me.TotalMilesTextBox.ReadOnly = True
-        Me.TotalMilesTextBox.Size = New System.Drawing.Size(198, 26)
+        Me.TotalMilesTextBox.Size = New System.Drawing.Size(133, 20)
         Me.TotalMilesTextBox.TabIndex = 34
         Me.TotalMilesTextBox.TabStop = False
         Me.TotalMilesTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'MileageChargeTextBox
         '
-        Me.MileageChargeTextBox.Location = New System.Drawing.Point(747, 113)
-        Me.MileageChargeTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.MileageChargeTextBox.Location = New System.Drawing.Point(498, 73)
         Me.MileageChargeTextBox.Name = "MileageChargeTextBox"
         Me.MileageChargeTextBox.ReadOnly = True
-        Me.MileageChargeTextBox.Size = New System.Drawing.Size(198, 26)
+        Me.MileageChargeTextBox.Size = New System.Drawing.Size(133, 20)
         Me.MileageChargeTextBox.TabIndex = 35
         Me.MileageChargeTextBox.TabStop = False
         Me.MileageChargeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'DayChargeTextBox
         '
-        Me.DayChargeTextBox.Location = New System.Drawing.Point(747, 162)
-        Me.DayChargeTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DayChargeTextBox.Location = New System.Drawing.Point(498, 105)
         Me.DayChargeTextBox.Name = "DayChargeTextBox"
         Me.DayChargeTextBox.ReadOnly = True
-        Me.DayChargeTextBox.Size = New System.Drawing.Size(198, 26)
+        Me.DayChargeTextBox.Size = New System.Drawing.Size(133, 20)
         Me.DayChargeTextBox.TabIndex = 36
         Me.DayChargeTextBox.TabStop = False
         Me.DayChargeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TotalDiscountTextBox
         '
-        Me.TotalDiscountTextBox.Location = New System.Drawing.Point(747, 211)
-        Me.TotalDiscountTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TotalDiscountTextBox.Location = New System.Drawing.Point(498, 137)
         Me.TotalDiscountTextBox.Name = "TotalDiscountTextBox"
         Me.TotalDiscountTextBox.ReadOnly = True
-        Me.TotalDiscountTextBox.Size = New System.Drawing.Size(198, 26)
+        Me.TotalDiscountTextBox.Size = New System.Drawing.Size(133, 20)
         Me.TotalDiscountTextBox.TabIndex = 37
         Me.TotalDiscountTextBox.TabStop = False
         Me.TotalDiscountTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TotalChargeTextBox
         '
-        Me.TotalChargeTextBox.Location = New System.Drawing.Point(747, 261)
-        Me.TotalChargeTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TotalChargeTextBox.Location = New System.Drawing.Point(498, 170)
         Me.TotalChargeTextBox.Name = "TotalChargeTextBox"
         Me.TotalChargeTextBox.ReadOnly = True
-        Me.TotalChargeTextBox.Size = New System.Drawing.Size(198, 26)
+        Me.TotalChargeTextBox.Size = New System.Drawing.Size(133, 20)
         Me.TotalChargeTextBox.TabIndex = 38
         Me.TotalChargeTextBox.TabStop = False
         Me.TotalChargeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -467,80 +427,79 @@ Partial Class RentalForm
         Me.ContextMenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.ContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ClearToolStripMenuItem, Me.SummaryToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.ContextMenuStrip.Name = "ContextMenuStrip"
-        Me.ContextMenuStrip.Size = New System.Drawing.Size(161, 132)
+        Me.ContextMenuStrip.Size = New System.Drawing.Size(126, 92)
         '
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(160, 32)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.FileToolStripMenuItem.Text = "&Calculate"
-        '
-        'TopMenuStrip
-        '
-        Me.TopMenuStrip.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
-        Me.TopMenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.TopMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem1})
-        Me.TopMenuStrip.Location = New System.Drawing.Point(0, 0)
-        Me.TopMenuStrip.Name = "TopMenuStrip"
-        Me.TopMenuStrip.Size = New System.Drawing.Size(964, 33)
-        Me.TopMenuStrip.TabIndex = 40
-        Me.TopMenuStrip.Text = "MenuStrip1"
         '
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(160, 32)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.ClearToolStripMenuItem.Text = "Cl&ear"
         '
         'SummaryToolStripMenuItem
         '
         Me.SummaryToolStripMenuItem.Name = "SummaryToolStripMenuItem"
-        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(160, 32)
+        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.SummaryToolStripMenuItem.Text = "&Summary"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(160, 32)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
+        '
+        'TopMenuStrip
+        '
+        Me.TopMenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.TopMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem1})
+        Me.TopMenuStrip.Location = New System.Drawing.Point(0, 0)
+        Me.TopMenuStrip.Name = "TopMenuStrip"
+        Me.TopMenuStrip.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
+        Me.TopMenuStrip.Size = New System.Drawing.Size(643, 24)
+        Me.TopMenuStrip.TabIndex = 40
+        Me.TopMenuStrip.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem1
         '
         Me.FileToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CalculateToolStripMenuItem, Me.ClearToolStripMenuItem1, Me.SummaryToolStripMenuItem1, Me.ExitToolStripMenuItem1})
         Me.FileToolStripMenuItem1.Name = "FileToolStripMenuItem1"
-        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(54, 29)
+        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(37, 22)
         Me.FileToolStripMenuItem1.Text = "&File"
         '
         'CalculateToolStripMenuItem
         '
         Me.CalculateToolStripMenuItem.Name = "CalculateToolStripMenuItem"
-        Me.CalculateToolStripMenuItem.Size = New System.Drawing.Size(270, 34)
+        Me.CalculateToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.CalculateToolStripMenuItem.Text = "&Calculate"
         '
         'ClearToolStripMenuItem1
         '
         Me.ClearToolStripMenuItem1.Name = "ClearToolStripMenuItem1"
-        Me.ClearToolStripMenuItem1.Size = New System.Drawing.Size(270, 34)
+        Me.ClearToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
         Me.ClearToolStripMenuItem1.Text = "Cl&ear"
         '
         'SummaryToolStripMenuItem1
         '
         Me.SummaryToolStripMenuItem1.Name = "SummaryToolStripMenuItem1"
-        Me.SummaryToolStripMenuItem1.Size = New System.Drawing.Size(270, 34)
+        Me.SummaryToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
         Me.SummaryToolStripMenuItem1.Text = "&Summary"
         '
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(270, 34)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(125, 22)
         Me.ExitToolStripMenuItem1.Text = "&Exit"
         '
         'RentalForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(964, 672)
-        Me.ContextMenuStrip = Me.ContextMenuStrip
+        Me.ClientSize = New System.Drawing.Size(643, 437)
         Me.Controls.Add(Me.TopMenuStrip)
         Me.Controls.Add(Me.TotalChargeTextBox)
         Me.Controls.Add(Me.TotalDiscountTextBox)
@@ -577,8 +536,7 @@ Partial Class RentalForm
         Me.Controls.Add(Me.AddressLabel)
         Me.Controls.Add(Me.NameLabel)
         Me.MainMenuStrip = Me.TopMenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Name = "RentalForm"
+        Me.name = "RentalForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Acme Car Rental Service"
         Me.RentalFormToolTip.SetToolTip(Me, "No Tool Tip Yet!!")
