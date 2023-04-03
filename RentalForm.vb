@@ -32,26 +32,33 @@ Public Class RentalForm
     Dim beginLessEnd As Boolean
     Dim daysViable As Boolean
 
+    'Disables the summary button on loading of the form
     Private Sub RentalForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SummaryButton.Enabled = False
     End Sub
 
+    'Sets the name variable to the text in the name text box when the text changes
     Private Sub NameTextBox_TextChanged(sender As Object, e As EventArgs) Handles NameTextBox.TextChanged
         name = NameTextBox.Text
     End Sub
 
+    'Sets the address variable to the text in the address text box when the text changes
     Private Sub AddressTextBox_TextChanged(sender As Object, e As EventArgs) Handles AddressTextBox.TextChanged
         address = AddressTextBox.Text
     End Sub
 
+    'Sets the city variable to the text in the city text box when the text changes
     Private Sub CityTextBox_TextChanged(sender As Object, e As EventArgs) Handles CityTextBox.TextChanged
         city = CityTextBox.Text
     End Sub
 
+    'Sets the state variable to the text in the state text box when the text changes
     Private Sub StateTextBox_TextChanged(sender As Object, e As EventArgs) Handles StateTextBox.TextChanged
         state = StateTextBox.Text
     End Sub
 
+    'Sets the zip variable and zip code variable to the text in the zip code text box when the text changes. If the zip code is not a number, sets a variable
+    'so that when the calculate button is hit the user will be alerted
     Private Sub ZipCodeTextBox_TextChanged(sender As Object, e As EventArgs) Handles ZipCodeTextBox.TextChanged
         Try
             zip = CInt(ZipCodeTextBox.Text)
@@ -67,6 +74,8 @@ Public Class RentalForm
         End Try
     End Sub
 
+    'Sets the begin variable to the text in the begin odometer text box when the text changes. If the begin odometer is not a number,
+    'sets a boolean so when the calculate button is hit the user will be alerted
     Private Sub BeginOdometerTextBox_TextChanged(sender As Object, e As EventArgs) Handles BeginOdometerTextBox.TextChanged
         Try
             begin = CInt(BeginOdometerTextBox.Text)
@@ -76,6 +85,8 @@ Public Class RentalForm
         End Try
     End Sub
 
+    'Sets the endO variable to the text in the end odometer text box when the text changes. If the end odometer is not a number,
+    'sets a boolean so when the calculate button is hit the user will be alerted
     Private Sub EndOdometerTextBox_TextChanged(sender As Object, e As EventArgs) Handles EndOdometerTextBox.TextChanged
         Try
             endO = CInt(EndOdometerTextBox.Text)
@@ -85,6 +96,8 @@ Public Class RentalForm
         End Try
     End Sub
 
+    'Sets the days variable to the text in the days text box when the text changes. If the days variable is not a number,
+    'sets a boolean so when the calculate button is hit the user will be alerted
     Private Sub DaysTextBox_TextChanged(sender As Object, e As EventArgs) Handles DaysTextBox.TextChanged
         Try
             days = CInt(DaysTextBox.Text)
@@ -94,6 +107,7 @@ Public Class RentalForm
         End Try
     End Sub
 
+    'Makes it so either the Miles radio button or the Kilometers radio button is hit but only one and never both.
     Private Sub MilesradioButton_CheckedChanged(sender As Object, e As EventArgs) Handles MilesradioButton.CheckedChanged
         If KilometersradioButton.Checked = True Then
             KilometersradioButton.Checked = False
@@ -102,6 +116,7 @@ Public Class RentalForm
         End If
     End Sub
 
+    'Makes it so either the Miles radio button or the Kilometers radio button is hit but only one and never both.
     Private Sub KilometersradioButton_CheckedChanged(sender As Object, e As EventArgs) Handles KilometersradioButton.CheckedChanged
         If MilesradioButton.Checked = True Then
             MilesradioButton.Checked = False
@@ -110,6 +125,8 @@ Public Class RentalForm
         End If
     End Sub
 
+    'Checks for any errors in the form filling out that need to be adressed. If any need to be adressed the focus is placed on that text box
+    'and the text box is cleared. If there is no errors, the cost and discounts are calculated and displayed while disabling the form and calculate button
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles CalculateButton.Click
         If NameTextBox.Text = "" Or AddressTextBox.Text = "" Or CityTextBox.Text = "" Or StateTextBox.Text = "" Or ZipCodeTextBox.Text = "" Or BeginOdometerTextBox.Text = "" Or EndOdometerTextBox.Text = "" Or DaysTextBox.Text = "" Then
             MsgBox("You must fill in all sections.")
@@ -210,6 +227,7 @@ Public Class RentalForm
         End If
     End Sub
 
+    'Clears the form and re-enables the form text boxes and calculate button. 
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
         NameTextBox.Enabled = True
         AddressTextBox.Enabled = True
@@ -263,6 +281,7 @@ Public Class RentalForm
         daysViable = False
     End Sub
 
+    'Shows the total revenue from the day, how many customers have been helped, and total miles the cars have driven in a message box
     Private Sub SummaryButton_Click(sender As Object, e As EventArgs) Handles SummaryButton.Click
         MsgBox($"
 Total number of customers:          {overallCustomers}
@@ -271,6 +290,7 @@ Total charges:                                ${overallRevenue}")
         ClearButton.PerformClick()
     End Sub
 
+    'Makes sure the user wants to leave the form with a yes/no message box. If they don't, nothing happens. If they do the program ends.
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         answerYes = CInt(MsgBox("Do you wish to quit?", CType(vbQuestion + vbYesNo + vbDefaultButton2, MsgBoxStyle), "Exit Menu"))
         If answerYes = vbYes Then
