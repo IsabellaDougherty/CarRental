@@ -1,4 +1,10 @@
-﻿Option Explicit On
+﻿'Isabella Dougherty
+''RCET0265
+'Spring 2023
+'Car Rental
+'https://github.com/IsabellaDougherty/CarRental.git
+
+Option Explicit On
 Option Strict On
 Option Compare Binary
 Public Class RentalForm
@@ -6,6 +12,7 @@ Public Class RentalForm
     Dim address As String
     Dim city As String
     Dim state As String
+    Dim zipCode As String
     Dim answerYes As Integer
     Dim zip As Integer
     Dim begin As Integer
@@ -48,7 +55,8 @@ Public Class RentalForm
     Private Sub ZipCodeTextBox_TextChanged(sender As Object, e As EventArgs) Handles ZipCodeTextBox.TextChanged
         Try
             zip = CInt(ZipCodeTextBox.Text)
-            If Len(zip) < 5 Then
+            zipCode = ZipCodeTextBox.Text
+            If Len(zipCode) < 5 Then
                 zipViable = False
             Else
                 zipViable = True
@@ -197,6 +205,7 @@ Public Class RentalForm
             TotalDiscountTextBox.Text = "$" + CStr(discount)
             TotalChargeTextBox.Text = "$" + CStr(totalCost)
 
+            CalculateButton.Enabled = False
 
         End If
     End Sub
@@ -214,6 +223,7 @@ Public Class RentalForm
         Seniorcheckbox.Enabled = True
         MilesradioButton.Enabled = True
         KilometersradioButton.Enabled = True
+        CalculateButton.Enabled = True
 
         MilesradioButton.Checked = True
         AAAcheckbox.Checked = False
@@ -262,7 +272,7 @@ Total charges:                                ${overallRevenue}")
     End Sub
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
-        answerYes = CInt(MsgBox("Do you Wish to quit?", CType(vbQuestion + vbYesNo + vbDefaultButton2, MsgBoxStyle), "Exit Menu"))
+        answerYes = CInt(MsgBox("Do you wish to quit?", CType(vbQuestion + vbYesNo + vbDefaultButton2, MsgBoxStyle), "Exit Menu"))
         If answerYes = vbYes Then
             End
         Else
