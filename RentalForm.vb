@@ -13,6 +13,7 @@ Public Class RentalForm
     Dim city As String
     Dim state As String
     Dim zipCode As String
+    Dim wrong As String
     Dim answerYes As Integer
     Dim zip As Integer
     Dim begin As Integer
@@ -129,7 +130,8 @@ Public Class RentalForm
     'and the text box is cleared. If there is no errors, the cost and discounts are calculated and displayed while disabling the form and calculate button
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles CalculateButton.Click
         If NameTextBox.Text = "" Or AddressTextBox.Text = "" Or CityTextBox.Text = "" Or StateTextBox.Text = "" Or ZipCodeTextBox.Text = "" Or BeginOdometerTextBox.Text = "" Or EndOdometerTextBox.Text = "" Or DaysTextBox.Text = "" Then
-            MsgBox("You must fill in all sections.")
+            wrong += "You must fill in all sections.
+"
             If NameTextBox.Text = "" Then
                 NameTextBox.Focus()
             ElseIf AddressTextBox.Text = "" Then
@@ -147,29 +149,47 @@ Public Class RentalForm
             ElseIf DaysTextBox.Text = "" Then
                 DaysTextBox.Focus()
             End If
-        ElseIf zipViable = False Then
-            MsgBox("You must input a valid zipcode.")
-            ZipCodeTextBox.Focus()
-            ZipCodeTextBox.Text = ""
-        ElseIf beginOdometerViable = False Then
-            MsgBox("You must input a beginning odometer value in numbers.")
-            BeginOdometerTextBox.Focus()
-            BeginOdometerTextBox.Text = ""
-        ElseIf endOdometerViable = False Then
-            MsgBox("You must input an ending odometer value in numbers.")
-            EndOdometerTextBox.Focus()
-            EndOdometerTextBox.Text = ""
-        ElseIf begin >= endO Then
-            MsgBox("The input odometer values is invalid. Make sure the beginning odometer value is less than the ending.")
-            BeginOdometerTextBox.Focus()
-            BeginOdometerTextBox.Text = ""
-            EndOdometerTextBox.Text = ""
-        ElseIf days <= 0 Or days > 45 Then
-            MsgBox("The input days is invalid. The amount of days must be greater then 0 and no more than 45.")
-            DaysTextBox.Focus()
-            DaysTextBox.Text = ""
+        ElseIf zipViable = False Or beginOdometerViable = False Or endOdometerViable = False Or begin >= endO Or days <= 0 Or days > 45 Then
+            If zipViable = False Then
+                wrong += "
+You must input a valid zipcode."
+                ZipCodeTextBox.Focus()
+                ZipCodeTextBox.Text = ""
+            End If
+
+            If beginOdometerViable = False Then
+                wrong += "
+You must input a beginning odometer value in numbers."
+                BeginOdometerTextBox.Focus()
+                BeginOdometerTextBox.Text = ""
+            End If
+
+            If endOdometerViable = False Then
+                wrong += "
+You must input an ending odometer value in numbers."
+                EndOdometerTextBox.Focus()
+                EndOdometerTextBox.Text = ""
+            End If
+
+            If begin >= endO Then
+                wrong += "
+The input odometer values is invalid. Make sure the beginning odometer value is less than the ending."
+                BeginOdometerTextBox.Focus()
+                BeginOdometerTextBox.Text = ""
+                EndOdometerTextBox.Text = ""
+            End If
+
+            If days <= 0 Or days > 45 Then
+                wrong += "
+The input days is invalid. The amount of days must be greater then 0 and no more than 45."
+                DaysTextBox.Focus()
+                DaysTextBox.Text = ""
+            End If
+
+            MsgBox(wrong)
+
         Else
-            SummaryButton.Enabled = True
+                SummaryButton.Enabled = True
             NameTextBox.Enabled = False
             AddressTextBox.Enabled = False
             CityTextBox.Enabled = False
