@@ -13,7 +13,6 @@ Public Class RentalForm
     Dim city As String
     Dim state As String
     Dim zipCode As String
-    Dim wrong As String
     Dim answerYes As Integer
     Dim zip As Integer
     Dim begin As Integer
@@ -41,27 +40,32 @@ Public Class RentalForm
     'Sets the name variable to the text in the name text box when the text changes
     Private Sub NameTextBox_TextChanged(sender As Object, e As EventArgs) Handles NameTextBox.TextChanged
         name = NameTextBox.Text
+        NameTextBox.BackColor = Color.White
     End Sub
 
     'Sets the address variable to the text in the address text box when the text changes
     Private Sub AddressTextBox_TextChanged(sender As Object, e As EventArgs) Handles AddressTextBox.TextChanged
         address = AddressTextBox.Text
+        AddressTextBox.BackColor = Color.White
     End Sub
 
     'Sets the city variable to the text in the city text box when the text changes
     Private Sub CityTextBox_TextChanged(sender As Object, e As EventArgs) Handles CityTextBox.TextChanged
         city = CityTextBox.Text
+        CityTextBox.BackColor = Color.White
     End Sub
 
     'Sets the state variable to the text in the state text box when the text changes
     Private Sub StateTextBox_TextChanged(sender As Object, e As EventArgs) Handles StateTextBox.TextChanged
         state = StateTextBox.Text
+        StateTextBox.BackColor = Color.White
     End Sub
 
     'Sets the zip variable and zip code variable to the text in the zip code text box when the text changes. If the zip code is not a number, sets a variable
     'so that when the calculate button is hit the user will be alerted
     Private Sub ZipCodeTextBox_TextChanged(sender As Object, e As EventArgs) Handles ZipCodeTextBox.TextChanged
         Try
+            ZipCodeTextBox.BackColor = Color.White
             zip = CInt(ZipCodeTextBox.Text)
             zipCode = ZipCodeTextBox.Text
             If Len(zipCode) < 5 Then
@@ -69,7 +73,6 @@ Public Class RentalForm
             Else
                 zipViable = True
             End If
-
         Catch ex As Exception
             zipViable = False
         End Try
@@ -79,6 +82,7 @@ Public Class RentalForm
     'sets a boolean so when the calculate button is hit the user will be alerted
     Private Sub BeginOdometerTextBox_TextChanged(sender As Object, e As EventArgs) Handles BeginOdometerTextBox.TextChanged
         Try
+            BeginOdometerTextBox.BackColor = Color.White
             begin = CInt(BeginOdometerTextBox.Text)
             beginOdometerViable = True
         Catch ex As Exception
@@ -90,6 +94,7 @@ Public Class RentalForm
     'sets a boolean so when the calculate button is hit the user will be alerted
     Private Sub EndOdometerTextBox_TextChanged(sender As Object, e As EventArgs) Handles EndOdometerTextBox.TextChanged
         Try
+            EndOdometerTextBox.BackColor = Color.White
             endO = CInt(EndOdometerTextBox.Text)
             endOdometerViable = True
         Catch ex As Exception
@@ -101,6 +106,7 @@ Public Class RentalForm
     'sets a boolean so when the calculate button is hit the user will be alerted
     Private Sub DaysTextBox_TextChanged(sender As Object, e As EventArgs) Handles DaysTextBox.TextChanged
         Try
+            DaysTextBox.BackColor = Color.White
             days = CInt(DaysTextBox.Text)
             daysViable = True
         Catch ex As Exception
@@ -129,32 +135,52 @@ Public Class RentalForm
     'Checks for any errors in the form filling out that need to be adressed. If any need to be adressed the focus is placed on that text box
     'and the text box is cleared. If there is no errors, the cost and discounts are calculated and displayed while disabling the form and calculate button
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles CalculateButton.Click
+        Dim wrong As String
         If NameTextBox.Text = "" Or AddressTextBox.Text = "" Or CityTextBox.Text = "" Or StateTextBox.Text = "" Or ZipCodeTextBox.Text = "" Or BeginOdometerTextBox.Text = "" Or EndOdometerTextBox.Text = "" Or DaysTextBox.Text = "" Then
             wrong += "You must fill in all sections.
 "
+            If DaysTextBox.Text = "" Then
+                DaysTextBox.Focus()
+                DaysTextBox.BackColor = Color.PaleVioletRed
+            End If
+            If EndOdometerTextBox.Text = "" Then
+                EndOdometerTextBox.Focus()
+                EndOdometerTextBox.BackColor = Color.PaleVioletRed
+            End If
+            If BeginOdometerTextBox.Text = "" Then
+                BeginOdometerTextBox.Focus()
+                BeginOdometerTextBox.BackColor = Color.PaleVioletRed
+            End If
+            If ZipCodeTextBox.Text = "" Then
+                ZipCodeTextBox.Focus()
+                ZipCodeTextBox.BackColor = Color.PaleVioletRed
+            End If
+            If StateTextBox.Text = "" Then
+                StateTextBox.Focus()
+                StateTextBox.BackColor = Color.PaleVioletRed
+            End If
+            If CityTextBox.Text = "" Then
+                CityTextBox.Focus()
+                CityTextBox.BackColor = Color.PaleVioletRed
+            End If
+            If AddressTextBox.Text = "" Then
+                AddressTextBox.Focus()
+                AddressTextBox.BackColor = Color.PaleVioletRed
+            End If
             If NameTextBox.Text = "" Then
                 NameTextBox.Focus()
-            ElseIf AddressTextBox.Text = "" Then
-                AddressTextBox.Focus()
-            ElseIf CityTextBox.Text = "" Then
-                CityTextBox.Focus()
-            ElseIf StateTextBox.Text = "" Then
-                StateTextBox.Focus()
-            ElseIf ZipCodeTextBox.Text = "" Then
-                ZipCodeTextBox.Focus()
-            ElseIf BeginOdometerTextBox.Text = "" Then
-                BeginOdometerTextBox.Focus()
-            ElseIf EndOdometerTextBox.Text = "" Then
-                EndOdometerTextBox.Focus()
-            ElseIf DaysTextBox.Text = "" Then
-                DaysTextBox.Focus()
+                NameTextBox.BackColor = Color.PaleVioletRed
             End If
+
+            MsgBox(wrong)
+
         ElseIf zipViable = False Or beginOdometerViable = False Or endOdometerViable = False Or begin >= endO Or days <= 0 Or days > 45 Then
             If zipViable = False Then
                 wrong += "
 You must input a valid zipcode."
                 ZipCodeTextBox.Focus()
                 ZipCodeTextBox.Text = ""
+                ZipCodeTextBox.BackColor = Color.PaleVioletRed
             End If
 
             If beginOdometerViable = False Then
@@ -162,6 +188,7 @@ You must input a valid zipcode."
 You must input a beginning odometer value in numbers."
                 BeginOdometerTextBox.Focus()
                 BeginOdometerTextBox.Text = ""
+                BeginOdometerTextBox.BackColor = Color.PaleVioletRed
             End If
 
             If endOdometerViable = False Then
@@ -169,6 +196,7 @@ You must input a beginning odometer value in numbers."
 You must input an ending odometer value in numbers."
                 EndOdometerTextBox.Focus()
                 EndOdometerTextBox.Text = ""
+                EndOdometerTextBox.BackColor = Color.PaleVioletRed
             End If
 
             If begin >= endO Then
@@ -177,6 +205,8 @@ The input odometer values is invalid. Make sure the beginning odometer value is 
                 BeginOdometerTextBox.Focus()
                 BeginOdometerTextBox.Text = ""
                 EndOdometerTextBox.Text = ""
+                BeginOdometerTextBox.BackColor = Color.PaleVioletRed
+                EndOdometerTextBox.BackColor = Color.PaleVioletRed
             End If
 
             If days <= 0 Or days > 45 Then
@@ -184,12 +214,11 @@ The input odometer values is invalid. Make sure the beginning odometer value is 
 The input days is invalid. The amount of days must be greater then 0 and no more than 45."
                 DaysTextBox.Focus()
                 DaysTextBox.Text = ""
+                DaysTextBox.BackColor = Color.PaleVioletRed
             End If
-
             MsgBox(wrong)
-
         Else
-                SummaryButton.Enabled = True
+            SummaryButton.Enabled = True
             NameTextBox.Enabled = False
             AddressTextBox.Enabled = False
             CityTextBox.Enabled = False
