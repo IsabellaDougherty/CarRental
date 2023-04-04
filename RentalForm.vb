@@ -1,12 +1,14 @@
-﻿'Isabella Dougherty
+﻿Option Explicit On
+Option Strict On
+Option Compare Binary
+'Isabella Dougherty
 ''RCET0265
 'Spring 2023
 'Car Rental
 'https://github.com/IsabellaDougherty/CarRental.git
 
-Option Explicit On
-Option Strict On
-Option Compare Binary
+Imports System.IO
+
 Public Class RentalForm
     Dim name As String
     Dim address As String
@@ -174,7 +176,7 @@ Public Class RentalForm
 
             MsgBox(wrong)
 
-        ElseIf zipViable = False Or beginOdometerViable = False Or endOdometerViable = False Or begin >= endO Or days <= 0 Or days > 45 Then
+        ElseIf zipViable = False Or beginOdometerViable = False Or endOdometerViable = False Or begin >= endO Or begin < 0 Or days <= 0 Or days > 45 Then
             If zipViable = False Then
                 wrong += "
 You must input a valid zipcode."
@@ -199,9 +201,9 @@ You must input an ending odometer value in numbers."
                 EndOdometerTextBox.BackColor = Color.PaleVioletRed
             End If
 
-            If begin >= endO Then
+            If begin < 0 Or begin >= endO Then
                 wrong += "
-The input odometer values is invalid. Make sure the beginning odometer value is less than the ending."
+The input odometer values is invalid. Make sure the beginning odometer value is less than the ending and neither are negative."
                 BeginOdometerTextBox.Focus()
                 BeginOdometerTextBox.Text = ""
                 EndOdometerTextBox.Text = ""
