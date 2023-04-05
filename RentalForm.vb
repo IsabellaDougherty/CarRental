@@ -1,6 +1,7 @@
 ﻿Option Explicit On
 Option Strict On
 Option Compare Binary
+
 'Isabella Dougherty
 ''RCET0265
 'Spring 2023
@@ -349,5 +350,32 @@ Total charges:                                ${overallRevenue}")
         Else
 
         End If
+    End Sub
+
+    'Clicks the calculate button when the claculate option is selected in the file menu if the calculate button is enabled
+    Private Sub CalculateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CalculateToolStripMenuItem.Click
+        If CalculateButton.Enabled Then
+            CalculateButton.PerformClick()
+        Else
+            MsgBox("This function is not currently available. Click clear to enter a new customers information")
+        End If
+    End Sub
+
+    'Clicks the clear button when the clear option is selected in the file menu
+    Private Sub ClearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearToolStripMenuItem.Click
+        ClearButton.PerformClick()
+    End Sub
+
+    'Clicks the summary button when the clear option is selected in the file menu if the summary button is enabled
+    Private Sub SummaryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SummaryToolStripMenuItem.Click
+        If SummaryButton.Enabled Then
+            SummaryButton.PerformClick()
+        Else
+            MsgBox("This function is not currently available. Fill out the information for at least one customer first.")
+        End If
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+        ExitButton.PerformClick()
     End Sub
 End Class
