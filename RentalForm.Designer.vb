@@ -453,30 +453,32 @@ Partial Class RentalForm
         Me.ContextMenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.ContextMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ClearToolStripMenuItem, Me.SummaryToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.ContextMenuStrip.Name = "ContextMenuStrip"
-        Me.ContextMenuStrip.Size = New System.Drawing.Size(181, 114)
+        Me.ContextMenuStrip.Size = New System.Drawing.Size(162, 92)
         '
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.FileToolStripMenuItem.Text = "&Calculate"
         '
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.ClearToolStripMenuItem.Text = "Cl&ear"
         '
         'SummaryToolStripMenuItem
         '
         Me.SummaryToolStripMenuItem.Name = "SummaryToolStripMenuItem"
-        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SummaryToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.SummaryToolStripMenuItem.Text = "&Summary"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.[End]), System.Windows.Forms.Keys)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'TopMenuStrip

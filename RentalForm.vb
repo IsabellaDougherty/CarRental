@@ -375,6 +375,7 @@ Total charges:                                ${overallRevenue}")
         End If
     End Sub
 
+    'Clicks the exit button when the exit option is selected in the file menu
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         ExitButton.PerformClick()
     End Sub
